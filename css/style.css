@@ -1,0 +1,316 @@
+@font-face {
+    font-family: 'Amiga Forever';
+    src: url('../font/AmigaForever.woff2') format('woff2'),
+        url('../font/AmigaForever.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+*::-webkit-scrollbar {
+    width: 13px;
+}
+  
+*::-webkit-scrollbar-track {
+    background: #497dca;
+    border: 3px solid #233d6471;
+}
+  
+*::-webkit-scrollbar-thumb {
+    background-color: #294775;
+    border-radius: 0px;
+    border: 3px solid #151b2371;
+}
+
+*::-webkit-scrollbar-corner{
+    background-color: #497dca;
+    border: 3px solid #151b2371;
+}
+
+html {
+    height: 100%;
+    cursor: url("../asset/cursor.cur"), auto;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    background-color: #a7a7a7;
+    font-family: 'Amiga Forever';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 8px;
+    user-select: none;   
+    overscroll-behavior: contain;
+}
+
+.top-bar {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    background-color: azure;
+    height: 25px;
+    width: 100%;
+    vertical-align: middle;
+    text-overflow: clip;
+    border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.top-bar img{
+    margin-left:10px;
+    margin-right: 10px
+}
+
+.top-bar-clock {
+    margin-left: auto;
+    margin-right: 20px;
+}
+
+.window {
+    position:absolute; 
+    width:350px;
+    height:250px;   
+    min-height: 150px;
+    min-width: 200px;
+    z-index: 40;
+    border: none;
+    visibility: hidden;
+}
+
+.window-s{
+    position:absolute; 
+    visibility: visible;
+    width:350px;
+    height:250px;   
+    min-height: 150px;
+    min-width: 200px;
+    z-index: 40;
+    border: none;
+}
+
+.window:focus{
+    z-index: 60;
+}
+
+.window:focus td{
+    background-color: #497dca;;
+}
+
+.window-tab{
+    width: 100%;
+    height: 100%;
+}
+
+.window-status-bar {
+    height: 19px;
+    border-spacing: 0px;
+    background-color: #6a7585;
+    border-left: 1px solid rgb(255, 255, 255);
+}
+
+.window-type {
+    padding: 0px;
+    margin: 0px;
+    height: 19px;
+    width: 20px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 2px solid rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    border-collapse: collapse;
+}
+
+.window-status {
+    width: 100%;    
+    max-width: 100px;
+    border-left: 1px solid rgb(255, 255, 255);
+    border-top: 2px solid rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    white-space: nowrap;   
+    overflow-x:hidden;  
+    text-overflow:clip;
+}
+
+.window-status span {
+    margin-left: 10px;
+}
+
+.win_close {
+    padding: 0px;
+    margin: 0px;
+    height: 19px;
+    width: 20px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 2px solid rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(0, 0, 0);
+    border-collapse: collapse;
+}
+
+.win_close img{
+    padding: 0px;
+    margin: 0px;
+    height: 16;
+    vertical-align: middle;
+}
+
+.win_center {
+    border-spacing: 0px;
+    height: 100%;
+    width: 100%;
+}
+
+.win-left-bar {
+    padding: 0px;
+    margin: 0px;
+    width: 3px;
+    height: 100%;   
+    border-left: 1px solid rgb(255, 255, 255);
+    border-right: 1px solid rgb(0, 0, 0);
+    background-color: #6a7585;
+}
+
+.win_n {
+    width: 100%;  
+    height: 100%;
+    min-height: 100px;
+    min-width: 150px;
+    background-color: #a7a7a7;
+    overflow-x: hidden;
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+    overflow: scroll;
+}
+
+.win_s {
+    width: 100%;  
+    height: 100%;
+    min-height: 100px;
+    min-width: 150px;
+    background-color: #a7a7a7;
+    overflow-x: hidden;
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+}
+
+.window-right-bar {
+    padding: 0px;
+    margin: 0px;
+    width: 2px;
+    height: 100%;   
+    border-left: 1px solid rgb(255, 255, 255);
+    border-right: 1px solid rgb(0, 0, 0);
+    background-color: #6a7585;
+}
+
+.win-bottom {
+    border-spacing: 0px;
+    height: 3px;
+    width: 100%;
+    background-color: #6a7585;
+}
+
+.win_bottom_bar {
+    border-left: 1px solid rgb(255, 255, 255);
+    border-bottom: 2px solid rgb(0, 0, 0);
+    border-right: 1px solid rgb(255, 255, 255);
+}
+
+.win_bottom_resizer {
+    border-top: 1px solid rgb(0, 0, 0);
+    border-bottom: 2px solid rgb(0, 0, 0);
+    border-right: 1px solid rgb(0, 0, 0);
+    border-left: 1px solid rgb(0, 0, 0);
+}
+
+.win_bottom_resizer img {
+    padding-right: 1px;
+    padding-left: 1px;
+}
+
+.icon {
+    display:inline-block;
+    position:relative;
+    text-align: center;  
+    width: 100px;
+    height: 75x;  
+    padding-top: 35px;
+    padding-bottom: 15px;
+}
+
+.icon span {
+    display: block;
+}
+
+.icon:active {
+    opacity: 0.5;
+}
+
+
+/* scalines */
+
+.scanlines::after {
+    pointer-events: none;
+    content: " ";
+    display: block;
+    z-index: 100;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    opacity: .75;
+    background: linear-gradient(to bottom ,transparent 50%, rgba(0,0,255,0.3) 90%);
+    background-size: 100% 1px;    
+}
+
+/* loading */
+
+.loading {
+    pointer-events: none;
+    content: " ";
+    display: block;
+    z-index: 101;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-size: 100% 1px; 
+    background-color: #000000;
+}
+
+
+/* cv */
+
+.my_cv {
+    margin:50px;
+    min-width:50px;
+    overflow-x:hidden;
+}
+
+.my_cv span{
+   font-size: 10px;
+   margin-left: 30px;
+}
+
+.my_cv img{
+    float: right;
+}
+
+.print_3d {
+    overflow-x: hidden;
+    overflow: hidden;
+    text-overflow: clip;
+    white-space: nowrap;
+}
+.print_3d img {
+    margin: 20px;
+    border: solid 1px;
+}
+
+
