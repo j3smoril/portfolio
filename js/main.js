@@ -37,10 +37,12 @@ win_my_cv = create_win('My CV', 100, 150, 700, 600, 1,(content, close) => {
 });
 document.body.appendChild(win_my_cv);
 
-win_42 = create_win('42 Malaga', 100, 150, 700, 600, 1,(content, close) => {
+win_42 = create_win('42 Malaga', 100, 150, 400, 400, 1,(content, close) => {
 	
 	content.innerHTML=(`
-    <span align="center"> [![jesmoril's 42 stats](https://badge.mediaplus.ma/kettlebells/jesmoril?1337Badge=off&UM6P=off)](https://github.com/oakoudad/badge42) </span>
+    <div class='m42' >
+    <a href="https://github.com/oakoudad/badge42"><img src="https://badge.mediaplus.ma/greenbinary/jesmoril?1337Badge=off&UM6P=off" alt="jesmoril's 42 stats" /></a>
+    </div>
     `);
     close.addEventListener('click', () => {
         win_42.style.visibility = 'hidden';
