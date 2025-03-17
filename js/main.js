@@ -130,6 +130,10 @@ win_3dprint = create_win('3D Print', 100, 100, 600, 400, 1,(content, close) => {
     <div class='print_3d' >
         <img src='asset/img/print1.jpg' >
         <img src='asset/img/print2.jpg' >
+        <img src='asset/img/print3.jpg' >
+        <br>
+        <img src='asset/img/print4.jpg' >
+        <img src='asset/img/print5.jpg' >
     </div>
     `);
     close.addEventListener('click', () => {
