@@ -1,4 +1,6 @@
+//
 // my files
+//
 win_my_cv = create_win('My CV', 100, 150, 700, 600, 1,(content, close) => {
 	
 	content.innerHTML=(`
@@ -35,6 +37,17 @@ win_my_cv = create_win('My CV', 100, 150, 700, 600, 1,(content, close) => {
 });
 document.body.appendChild(win_my_cv);
 
+win_42 = create_win('42 Malaga', 100, 150, 700, 600, 1,(content, close) => {
+	
+	content.innerHTML=(`
+    <span align="center"> [![jesmoril's 42 stats](https://badge.mediaplus.ma/kettlebells/jesmoril?1337Badge=off&UM6P=off)](https://github.com/oakoudad/badge42) </span>
+    `);
+    close.addEventListener('click', () => {
+        win_42.style.visibility = 'hidden';
+    });
+});
+document.body.appendChild(win_42);
+
 icon_cv = create_icon('My cv','asset/img/icon_text.png',10,10, () => {
     win_my_cv.style.visibility = 'visible'
     win_my_cv.focus();
@@ -48,19 +61,25 @@ icon_gh = create_icon('Github','asset/img/icon_gh.png',190,-150, () => {
 icon_ps = create_icon('Play Store','asset/img/icon_ps.png',270,-230, () => {
     window.open('https://play.google.com/store/apps/developer?id=AbyssApp', '_blank').focus();
 });
+icon_42 = create_icon('42','asset/img/icon_42.png',270,-250, () => {
+    win_42.style.visibility = 'visible'
+    win_42.focus();
+});
 win_my_files = create_win('My files', 100, 100, 500, 200, 1, function(content, close){
 	content.appendChild(icon_cv);
 	content.appendChild(icon_in);
 	content.appendChild(icon_gh);
     content.appendChild(icon_ps);
+    content.appendChild(icon_42);
 
     close.addEventListener('click', () => {
         win_my_files.style.visibility = 'hidden';
     });
 });
 document.body.appendChild(win_my_files);
-
-//games
+//
+// games
+//
 win_30level = create_win('30 Level', 100, 100, 495, 385, 2,(content,close) => {
 	content.innerHTML=(`
     <iframe width="100%" height="100%"
